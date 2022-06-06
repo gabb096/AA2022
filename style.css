@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: 0px;
+}
+body{
+    display: grid;
+    background-color: rgb(255, 255, 255);
+}
+h3{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3vh;
+}
+.title{
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 90vw;
+    height: 8vh;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3vh;
+    border: 2px solid #4CAF50;
+}
+.inputSection{
+    position: relative;
+    top: 10vh;
+    grid-column: 1;
+    grid-row: 1;
+    width: calc(50vw - 4px);
+    height: calc(90vh - 4px);
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.outputSection{
+    position: relative;
+    top: 10vh;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+}
+.plotSection{
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    width: calc(50vw - 4px);
+    height: calc(60vh - 4px);
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+.adviseSection{
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+    width: calc(50vw - 4px);
+    height: calc(30vh - 4px);
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+.inputSubSection{
+    display: grid;
+    justify-content: space-evenly;
+}
+.label{
+    position: relative;
+    grid-row: 1;
+}
+.input{
+    position: relative;
+    grid-row: 2;
+    width: 12vw;
+    height: 1.5vw;
+    background-color: transparent;
+    border-bottom: 0.12vw solid #4CAF50;
+}
+.furnitureContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    justify-content: left;
+}
+.furniture{
+    gap: 2vw;
+    justify-content: left;
+}
+.button{
+    position: absolute;
+    font-size: large;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: transparent;
+    right: 3vw;
+    width: 2vw;
+    height: 2vw;
+    border: 0.12vw solid #4CAF50;
+    border-radius: 20%;
+}

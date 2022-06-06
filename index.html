@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T60 Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <!-- Title section -->
+
+    <div class="title">
+        <h1 style="text-align: center" > Tempo di riverbero </h1>
+    </div>
+
+    <!-- Input section in left half of the screen-->
+	<div class="inputSection"> 
+        
+        <h3>Inserisci le dimensioni della stanza</h3>
+
+        <div class="inputSubSection">
+            <label class="label">Larghezza</label>
+            <input type="number" class="input"  min="1"  placeholder="Larghezza in Cm"  required > 
+
+            <label class="label">Altezza</label>
+            <input type="number" class="input"  min="1"  placeholder="Altezza in Cm" required> 
+
+            <label class="label">Profondità</label>
+            <input type="number" class="input"  min="1"  placeholder="Profondità in Cm"  required> 
+        </div>
+
+        <h3>Di che materiali sono le pareti?</h3>
+
+        <div class="inputSubSection">
+            <label class="label" > Muri perimetrali</label>
+			<input list="List1" class="input"  required >
+
+            <label class="label"> Soffitto</label>
+			<input list="List1" class="input" required >
+
+            <label class="label"> Pavimento</label>
+			<input list="List1" class="input" required >
+        </div>
+
+        <h3>Porte e finestre</h3>
+
+        <div class="inputSubSection">
+            <label title="Porta generica in legno di 80x250 cm" class="label">Porte</label>
+            <input type="number" class="input"  min="1"  placeholder="Porte"> 
+
+            <label title="Finestra generica di 80x80 cm" class="label">Finestre</label>
+            <input type="number" class="input"  min="0"  placeholder="Finestre"> 
+        </div>
+
+        <h3>Arredamento</h3>
+        <div class="furnitureContainer">
+
+            <button class="button plus"> + </button>
+            <button class="button minus" style="right: 6vw;"> - </button>
+            
+            <div class="furniture">
+                <label class="label"> Arredamento 1 </label>
+                <input list="List2"  class="input" placeholder="Arredamento" >
+                <input type="number" class="input" min="0" placeholder="Superficie in Cm^2">    
+            </div>
+
+            <div class="furniture">
+                <label class="label"> Arredamento 2 </label>
+                <input list="List2"  class="input" placeholder="Arredamento" >
+                <input type="number" class="input" min="0" placeholder="Superficie in Cm^2">    
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="outputSection"> <!-- Output section in right half of the screen -->
+        
+        <div class="plotSection"> <!-- Plot section in top half of the Output section -->
+            <h3>Risultato</h3>
+        </div>
+
+        <div class="adviseSection">  <!-- Advise in bottom half of the Output section -->
+            <h3>Qualche consiglio</h3>
+        </div>
+
+    </div>
+    
+    <datalist id="List1">
+        <option value="Muratura">
+        <option value="Intonacato">
+        <option value="Marmo Lucido">
+        <option value="Parquet Incollato">
+        <option value="Parquet su Listelli di Legno">
+        <option value="Ceramicato">
+        <option value="Linoleum">
+    </datalist>
+
+    <datalist id="List2">
+        <option value="Muratura">
+        <option value="Intonacato">
+        <option value="Marmo_Lucido">
+        <option value="Parquet_Incollato">
+        <option value="Parquet_Su_Listelli_Di_Legno">
+        <option value="Ceramicato">
+        <option value="Linoleum">
+    </datalist>
+
+    <script language="JavaScript" type="text/javascript" src="script.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="helper.js"></script> -->
+</body>
+</html>
