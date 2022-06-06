@@ -1,7 +1,6 @@
 let DOM_MinusButton = document.querySelector(".minus");
 let DOM_PlusButton = document.querySelector(".plus");
 
-
 DOM_PlusButton.addEventListener("click", function() 
 {  
     let DOM_FornitureContainer = document.querySelector(".furnitureContainer");
@@ -29,4 +28,31 @@ DOM_MinusButton.addEventListener("click", function()
     {
         DOM_FornitureContainer.removeChild(DOM_Forniture[n-1]);
     }
+});
+
+let DOM_EnterButton = document.querySelector(".enter");
+let DOM_PlotSection = document.querySelector(".plotSection");
+
+DOM_EnterButton.addEventListener("click", function(){
+
+    let xArray = [250,2000,5000,10000,15000,20000];
+    let yArray = [1,2,5,7,3,2];
+
+    // Define Data
+    let data = [{
+    x: xArray,
+    y: yArray,
+    mode:"lines"
+    }];
+
+    // Define Layout
+    let layout = {
+        xaxis: {type: 'log', autorange: true},
+        yaxis: {type: 'lin', autorange: true},
+        title: "T60"
+    };
+
+    // Display using Plotly
+    Plotly.newPlot("myPlot", data, layout);
+
 });

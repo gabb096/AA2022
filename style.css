@@ -1,3 +1,6 @@
+:root{
+    --white:rgb(255, 255, 255);
+}
 *{
     margin: 0px;
     border: 0px;
@@ -5,7 +8,7 @@
 }
 body{
     display: grid;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(93, 93, 93);
 }
 h3{
     text-align: center;
@@ -15,32 +18,35 @@ h3{
 .title{
     position: absolute;
     top: 0;
-    left: 5vw;
-    width: 90vw;
-    height: 8vh;
+    width: calc(100vw - 4px);
+    height: calc(8vh - 4px);;
     font-family: "Times New Roman", Times, serif;
     font-size: 3vh;
+    background-color: var(--white);
     border: 2px solid #4CAF50;
+    border-radius: 10px;
 }
 .inputSection{
     position: relative;
-    top: 10vh;
+    top: calc(8vh - 2px);
     grid-column: 1;
     grid-row: 1;
     width: calc(50vw - 4px);
-    height: calc(90vh - 4px);
+    height: calc(92vh - 4px);
     border: 2px solid #4CAF50;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1vw;
+    background-color: var(--white);
 }
 .outputSection{
     position: relative;
-    top: 10vh;
+    top: calc(8vh - 2px);
     grid-column: 2;
     grid-row: 1;
     display: grid;
+    background-color: transparent;
 }
 .plotSection{
     position: relative;
@@ -49,6 +55,7 @@ h3{
     width: calc(50vw - 4px);
     height: calc(60vh - 4px);
     border: 2px solid #4CAF50;
+    background-color: var(--white);
     border-radius: 10px;
 }
 .adviseSection{
@@ -56,8 +63,9 @@ h3{
     grid-column: 2;
     grid-row: 2;
     width: calc(50vw - 4px);
-    height: calc(30vh - 4px);
+    height: calc(32vh - 4px);
     border: 2px solid #4CAF50;
+    background-color: var(--white);
     border-radius: 10px;
 }
 .inputSubSection{
@@ -77,6 +85,8 @@ h3{
     border-bottom: 0.12vw solid #4CAF50;
 }
 .furnitureContainer{
+    position: relative;
+    left: 1vw;
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -101,4 +111,11 @@ h3{
 }
 .button:hover{
     cursor: pointer;
+}
+.enter{
+    position: absolute;
+    top : 35vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
 }
