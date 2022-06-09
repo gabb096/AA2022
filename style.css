@@ -9,30 +9,31 @@
 body{
     display: grid;
     background-color: rgb(93, 93, 93);
+    height: calc(100vh - 4vw);
 }
 h3{
     text-align: center;
     font-family: "Times New Roman", Times, serif;
-    font-size: 3vh;
+    font-size: 1.5vw;
 }
 .title{
     position: absolute;
     top: 0;
     width: calc(100vw - 4px);
-    height: calc(8vh - 4px);;
+    height: calc(4vw - 4px);;
     font-family: "Times New Roman", Times, serif;
-    font-size: 3vh;
+    font-size: 1.5vw;
     background-color: var(--white);
-    border: 2px solid #4CAF50;
+    border: 2px solid rgb(76, 175, 80);
     border-radius: 10px;
 }
 .inputSection{
     position: relative;
-    top: calc(8vh - 2px);
+    top: calc(4vw - 2px);
     grid-column: 1;
     grid-row: 1;
     width: calc(50vw - 4px);
-    height: calc(92vh - 4px);
+    height: calc(100% - 4px);
     border: 2px solid #4CAF50;
     border-radius: 10px;
     display: flex;
@@ -42,7 +43,7 @@ h3{
 }
 .outputSection{
     position: relative;
-    top: calc(8vh - 2px);
+    top: calc(4vw - 2px);
     grid-column: 2;
     grid-row: 1;
     display: grid;
@@ -53,7 +54,7 @@ h3{
     grid-column: 2;
     grid-row: 1;
     width: calc(50vw - 4px);
-    height: calc(60vh - 4px);
+    height: calc(100% - 4px);
     border: 2px solid #4CAF50;
     background-color: var(--white);
     border-radius: 10px;
@@ -63,7 +64,7 @@ h3{
     grid-column: 2;
     grid-row: 2;
     width: calc(50vw - 4px);
-    height: calc(32vh - 4px);
+    height: calc(100% - 4px);
     border: 2px solid #4CAF50;
     background-color: var(--white);
     border-radius: 10px;
@@ -79,7 +80,7 @@ h3{
 .input{
     position: relative;
     grid-row: 2;
-    width: 12vw;
+    width: 14.2vw;
     height: 1.5vw;
     background-color: transparent;
     border-bottom: 0.12vw solid #4CAF50;
@@ -103,6 +104,7 @@ h3{
     justify-content: center; 
     align-items: center;
     background-color: transparent;
+    top: 0%;
     right: 3vw;
     width: 2vw;
     height: 2vw;
@@ -114,7 +116,7 @@ h3{
 }
 .enter{
     position: absolute;
-    top : 35vh;
+    top : 4vw;
     width: auto;
     height: auto;
     border-radius: 10px;

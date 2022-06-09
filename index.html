@@ -4,112 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T60 Calculator</title>
+    <title>RT60 Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
-    <!-- Title section -->
-
+<!-- Title section -->
     <div class="title">
-        <h1 style="text-align: center" > Tempo di riverbero </h1>
+        <h1 class="LangText" style="text-align: center" > Tempo di riverbero </h1>
     </div>
 
-    <!-- Input section in left half of the screen-->
-	<div class="inputSection"> 
+<!-- Input section in left half of the screen-->
+    <div class="inputSection"> 
         
-        <h3>Inserisci le dimensioni della stanza</h3>
+        <h3 class="LangText">Inserisci le dimensioni della stanza</h3>
 
         <div class="inputSubSection">
-            <label class="label">Larghezza</label>
-            <input type="number" class="input"  min="1"  placeholder="Larghezza in Cm"  required > 
+            <label class="label LangText">Larghezza</label>
+            <input type="number" class="input"  min="1"  placeholder="Cm"  required > 
 
-            <label class="label">Altezza</label>
-            <input type="number" class="input"  min="1"  placeholder="Altezza in Cm" required> 
+            <label class="label LangText">Altezza</label>
+            <input type="number" class="input"  min="1"  placeholder="Cm" required> 
 
-            <label class="label">Profondità</label>
-            <input type="number" class="input"  min="1"  placeholder="Profondità in Cm"  required> 
+            <label class="label LangText">Profondità</label>
+            <input type="number" class="input"  min="1"  placeholder="Cm"  required> 
         </div>
 
-        <h3>Di che materiali sono le pareti?</h3>
+        <h3 class="LangText">Di che materiali sono le pareti?</h3>
 
         <div class="inputSubSection">
-            <label class="label" > Muri perimetrali</label>
+            <label class="label LangText" > Muri perimetrali</label>
 			<input list="List1" class="input"  required >
 
-            <label class="label"> Soffitto</label>
+            <label class="label LangText"> Soffitto</label>
 			<input list="List1" class="input" required >
 
-            <label class="label"> Pavimento</label>
+            <label class="label LangText"> Pavimento</label>
 			<input list="List1" class="input" required >
         </div>
 
-        <h3>Porte e finestre</h3>
+        <h3 class="LangText">Porte e finestre</h3>
 
         <div class="inputSubSection">
-            <label title="Porta generica in legno di 80x250 cm" class="label">Porte</label>
-            <input type="number" class="input"  min="1"  placeholder="Porte"> 
+            <label title="Generic wood door 80x250 cm" class="label LangText">Porte</label>
+            <input type="number" class="input"  min="1" > 
 
-            <label title="Finestra generica di 80x80 cm" class="label">Finestre</label>
-            <input type="number" class="input"  min="0"  placeholder="Finestre"> 
+            <label title="Generic window sash 40x80 cm" class="label LangText">Finestre (ante)</label>
+            <input type="number" class="input"  min="0"> 
         </div>
 
-        <h3>Arredamento</h3>
+        <h3 class="LangText">Arredamento, sedili e persone</h3>
         <div class="furnitureContainer">
 
-            <button class="button plus"> + </button>
-            <button class="button minus" style="right: 6vw;"> - </button>
-            <button class="enter button"> Calcola! </button>
+            <button type="button" class="button plus"> + </button>
+            <button type="button" class="button minus" style="right: 6vw;"> - </button>
+            <button type="submit" class="enter button LangText"> Calcola! </button>
             
             <div class="furniture">
-                <label class="label"> Arredamento 1 </label>
-                <input list="List2"  class="input" placeholder="Arredamento" >
+                <label class="label">1 </label>
+                <input list="List2"  class="input" name="furniture" placeholder="Arredamento,sedili,persone" >
                 <input type="number" class="input" min="0" placeholder="Superficie Cm^2">    
             </div>
 
             <div class="furniture">
-                <label class="label"> Arredamento 2 </label>
-                <input list="List2"  class="input" placeholder="Arredamento" >
+                <label class="label">2 </label>
+                <input list="List2"  class="input" name="furniture" placeholder="Arredamento,sedili,persone" >
                 <input type="number" class="input" min="0" placeholder="Superficie Cm^2">    
             </div>
            
         </div>
     </div>
+	
+<!-- Output section in right half of the screen -->
+    <div class="outputSection"> 
 
-    <div class="outputSection"> <!-- Output section in right half of the screen -->
-        
-        <div class="plotSection"> <!-- Plot section in top half of the Output section -->
-            <h3>Risultato</h3>
+    <!-- Plot section in top half of the Output section -->
+        <div class="plotSection"> 
+            <h3 class="LangText">Risultato</h3>
             <div id="myPlot" style="width:45vw; height: 55vh;"></div>
         </div>
-
-        <div class="adviseSection">  <!-- Advise in bottom half of the Output section -->
-            <h3>Qualche consiglio</h3>
+    <!-- Advise in bottom half of the Output section -->
+        <div class="adviseSection">  
+            <h3 class="LangText">Trattamento</h3>
         </div>
 
     </div>
-    
+<!-- Lists of all the materials for the room section -->
     <datalist id="List1">
-        <option value="Muratura">
-        <option value="Intonacato">
-        <option value="Marmo Lucido">
-        <option value="Parquet Incollato">
-        <option value="Parquet su Listelli di Legno">
-        <option value="Ceramicato">
-        <option value="Linoleum">
+        <option class="List" value="Mattoni"></option>
+        <option class="List" value="Calcestruzzo"></option>
+        <option class="List" value="Intonaco"></option>
+        <option class="List" value="Intonaco Cemento"></option>
+        <option class="List" value="Intonaco Gesso"></option>
+        <option class="List" value="Marmo Lucidato"></option>
+        <option class="List" value="Parquet Incollato"></option>
+        <option class="List" value="Parquet su Listelli"></option>
+        <option class="List" value="Ceramica"></option>
+        <option class="List" value="Linoleum"></option>
+        <option class="List" value="Moquette su Cemento"></option>
+        <option class="List" value="Gomma"></option>
+        <option class="List" value="Gesso liscio Sospeso"></option>
     </datalist>
 
+<!-- Lists for the furniture and people section -->
     <datalist id="List2">
-        <option value="Muratura">
-        <option value="Intonacato">
-        <option value="Marmo_Lucido">
-        <option value="Parquet_Incollato">
-        <option value="Parquet_Su_Listelli_Di_Legno">
-        <option value="Ceramicato">
-        <option value="Linoleum">
-    </datalist>
+        <option class="List" value="Specchio"></option>
+        <option class="List" value="Bocchette ventilazione"></option>
+        <option class="List" value="Tenda Cotone no Drappeggio"></option>
+        <option class="List" value="Tenda Cotone poco Drappeggio"></option>
+        <option class="List" value="Tenda Cotone molto Drappeggio"></option>
+        <option class="List" value="Tappeto Pesante"></option>
+        <option class="List" value="Perlinato Inchiodato"></option>
+        <option class="List" value="Sedia Legno Libera"></option>
+        <option class="List" value="Sedia Legno Occupata"></option>
+        <option class="List" value="Sedia Poco Imbottita Libera"></option>
+        <option class="List" value="Sedia Poco Imbottita Occupata"></option>
+        <option class="List" value="Sedia Imbottita Libera"></option>
+        <option class="List" value="Sedia Imbottita Occupata"></option>
+        <option class="List" value="Persona Adulta"></option>
 
-    <script language="JavaScript" type="text/javascript" src="script.js"></script>
-    <!-- <script language="JavaScript" type="text/javascript" src="helper.js"></script> -->
+    </datalist>
+   
+    <!-- Suppurt file with all the coefficients -->
+    <script language="JavaScript" type="text/javascript" src="helper.js"></script>
+    <!-- Script for the plot -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+     <!-- Main script -->
+     <script language="JavaScript" type="text/javascript" src="script.js"></script> 
 </body>
 </html>
