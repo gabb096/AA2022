@@ -146,7 +146,7 @@ function CalculateRT60(){
         }
 
     for(let i=0; i<RT60_perFreq.length; i++)
-        RT60_perFreq[i] = 0.16*V/A_perFreq[i];
+        RT60_perFreq[i] = (0.16*V/A_perFreq[i]).toFixed(3);
     
     console.log(RT60_perFreq)
 
