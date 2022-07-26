@@ -45,8 +45,8 @@ const CoefMatrix = [
 const LangText = [
     [`Tempo di riverbero`,`Inserisci le dimensioni della stanza`, `Larghezza`, `Altezza`, `Profondità`, 
      `Di che materiali sono le pareti?`, `Muri perimetrali`, `Soffitto`, `Pavimento`, `Porte e finestre`, `Porte`, 
-     `Finestre (ante)`, `Arredamento, sedili e persone`, `Calcola!`, `Risultato`, `Trattamento`],
+     `Finestre (ante)`, `Arredamento, sedili e persone`, `Calcola`, `Risultato`, `Trattamento`],
     
     [`Reverberation time`, `Enter room dimensions`, `Width`, `Height`, `Depth`, `What materials are the walls made of?`,
      `Perimeter walls`, `Ceiling`, `Floor`, `Doors and windows`, `Doors`, `Windows (sash)`, `Furniture, seats and people`, 
-     `Calculate!`, `Result`, `Treatment`]];
+     `Calculate`, `Result`, `Treatment`]];

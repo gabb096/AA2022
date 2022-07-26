@@ -6,6 +6,8 @@ let frequencies = [125, 250, 500, 1000, 2000, 4000];// The frequencies (Hz) at w
 
 let lang = 0;
 
+changeLanguage(document.lang);
+
 // Add new furniture input, max 8 elements
 DOM_PlusButton.addEventListener(`click`, function() 
 {  
@@ -160,10 +162,10 @@ function changeLanguage(newLang){
     document.documentElement.lang = newLang;
 
     switch(newLang) {
-        case `It`:
+        case `it`:
             lang = 0;
 
-        case `Eng`:
+        case `eng`:
             lang = 1;
 
         default:
